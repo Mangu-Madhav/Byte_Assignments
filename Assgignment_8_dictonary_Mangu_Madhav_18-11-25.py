@@ -142,7 +142,14 @@ print(d14)
 
 # Qno 13: Default Dictionary
 # Create a default dictionary where each key has a default value of an empty list. Add some elements to the lists and print the dictionary.
-#doubt
+d15={k:[] for k in range(1,6)}
+print(d15)
+d15[1]='hello'
+d15[2]='hi'
+d15[3]='pyhton'
+d15[4]=3.25
+d15[5]=2+3j
+print(d15)
 
 
 # In[98]:
@@ -165,4 +172,9 @@ print(dictfun(s1))
 # 15: Dictionary and JSON
 # Create a dictionary representing a book with keys 'title', 'author', 'year', and 'genre'. Convert the dictionary to a JSON string and print it.
 #Topic is not Discussed
-
+# d17={'title':'OG', 'author':'sujeeth','year':2025,'genre':'johnny emotion'}
+# print("{")
+# for k,v in d17.items():
+#     print(k,"\t:",v)
+# print("}")
+# ####
