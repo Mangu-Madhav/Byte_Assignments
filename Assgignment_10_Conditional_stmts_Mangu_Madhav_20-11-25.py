@@ -114,22 +114,32 @@ else:
 
 
 # 9. Electricity Bill Category: Use match-case for type
-E_bill=float(input("enter electic bill"))
-# match(E_bill):
-#     case 3000:
-#         print("Your's is Domestic Electric bill")
-#     case 20000:
-#         print("your's is Commericial Electric bill")
-#     case 20000:
-#         print("your's is industrial Electric bill")
-#     case _:
-#         print("enter valid bill amount")
+E_bill=float(input("enter units used"))
+if(E_bill<100):
+    x='a'
+elif(E_bill<300):
+    x='b'
+elif(E_bill<900):
+    x='c'
+elif(E_bill>900):
+    x='d'
 
+match(x):
+    case 'a':
+        print(f'Rate per Unit is: Rs.4.5\nTotal bill is {4.5*E_bill}\nYour"s Domestic Electric bill')
+    case 'b':
+        print(f'Rate per Unit is: Rs.5.1\nTotal bill is {5.1*E_bill}\nYour"s Commericial bill')
+    case 'c':
+        print(f'Rate per Unit is: Rs.6.3\nTotal bill is {6.3*E_bill}\nYour"s institutional bill')
+    case 'd':
+        print(f'Rate per Unit is: Rs.8\nTotal bill is {8*E_bill}\nYour"s industrial bill')
+    case _:
+        print("enter only the no.of units used")
 
 # In[39]:
 
 
-# Simple Calculator: Use match-case for +, -, *, /.
+# 10 Simple Calculator: Use match-case for +, -, *, /.
 n1=int(input("enter 1st number"))
 n2=int(input("enter 2nd number"))
 op=input("enter operator(+,-,*,/)")
@@ -144,3 +154,69 @@ match(op):
         print(f'floor Division of {n1} and {n2} is {n1/n2}')
     case _:print("enter valid operator")
 
+
+# Project
+# 1. Core Billing Logic (Using if-else and if)
+Item_Name=input("enter Item Name\t\t   :")
+Quantity=float(input("enter Quantity of the item :"))
+if(Item_Name.lower()=="rice"):
+    price=50
+    print("Price\t\t\t   :",price)
+    subtotal=price*Quantity
+    print("subtotal\t\t   :",subtotal)
+    if(Quantity>10):
+        Discount=0.05*subtotal
+        print("Discount\t\t   :",Discount)
+    else:
+        Discount=0
+    total=subtotal-Discount
+    print("total \t\t\t   :",total)
+    Discount2=0
+    loyal=input("is loayal member(yes/no)   :")    
+    if(loyal.lower()=='yes'):
+        Discount2=0.1*total
+        print("Discount for loyal\t   :",Discount2)
+    total_bill=total-Discount2
+    print("total bill_After_Discount  :",total_bill)
+    print("you have saved\t\t   :",Discount+(Discount2))
+    
+elif(Item_Name.lower()=="dal"):
+    price=40
+    print("Price\t\t\t   :",price)
+    subtotal=price*Quantity
+    print("subtotal\t\t   :",subtotal)
+    if(Quantity>10):
+        Discount=0.05*subtotal
+        print("Discount\t\t   :",Discount)
+    else:
+        Discount=0
+    total=subtotal-Discount
+    print("total \t\t\t   :",total)
+    Discount2=0
+    loyal=input("is loayal member(yes/no)   :")    
+    if(loyal.lower()=='yes'):
+        Discount2=0.1*total
+        print("Discount for loyal\t   :",Discount2)
+    total_bill=total-Discount2
+    print("total bill_After_Discount  :",total_bill)
+    print("you have saved\t\t   :",Discount+(Discount2))
+elif(Item_Name.lower()=="sugar"):
+    price=30
+    print("Price\t\t\t   :",price)
+    subtotal=price*Quantity
+    print("subtotal\t\t   :",subtotal)
+    if(Quantity>10):
+        Discount=0.05*subtotal
+        print("Discount\t\t   :",Discount)
+    else:
+        Discount=0
+    total=subtotal-Discount
+    print("total \t\t\t   :",total)
+    Discount2=0
+    loyal=input("is loayal member(yes/no)   :")    
+    if(loyal.lower()=='yes'):
+        Discount2=0.1*total
+        print("Discount for loyal\t   :",Discount2)
+    total_bill=total-Discount2
+    print("total bill_After_Discount  :",total_bill)
+    print("you have saved\t\t   :",Discount+(Discount2))
