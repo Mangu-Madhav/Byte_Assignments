@@ -163,19 +163,19 @@ if(Item_Name.lower()=="rice"):
     price=50
     print("Price\t\t\t   :",price)
     subtotal=price*Quantity
-    print("subtotal\t\t   :",subtotal)
+    print("subtotal\t\t   :",subtotal,end="\t")
     if(Quantity>10):
         Discount=0.05*subtotal
-        print("Discount\t\t   :",Discount)
     else:
         Discount=0
+    print("Discount\t\t   :",Discount)        
     total=subtotal-Discount
     print("total \t\t\t   :",total)
     Discount2=0
     loyal=input("is loayal member(yes/no)   :")    
     if(loyal.lower()=='yes'):
         Discount2=0.1*total
-        print("Discount for loyal\t   :",Discount2)
+    print("Discount for loyal\t   :",Discount2,end="\t")
     total_bill=total-Discount2
     print("total bill_After_Discount  :",total_bill)
     print("you have saved\t\t   :",Discount+(Discount2))
@@ -184,19 +184,19 @@ elif(Item_Name.lower()=="dal"):
     price=40
     print("Price\t\t\t   :",price)
     subtotal=price*Quantity
-    print("subtotal\t\t   :",subtotal)
+    print("subtotal\t\t   :",subtotal,end="\t")
     if(Quantity>10):
         Discount=0.05*subtotal
-        print("Discount\t\t   :",Discount)
     else:
         Discount=0
+    print("Discount\t\t   :",Discount)        
     total=subtotal-Discount
     print("total \t\t\t   :",total)
     Discount2=0
     loyal=input("is loayal member(yes/no)   :")    
     if(loyal.lower()=='yes'):
         Discount2=0.1*total
-        print("Discount for loyal\t   :",Discount2)
+    print("Discount for loyal\t   :",Discount2,end="\t")
     total_bill=total-Discount2
     print("total bill_After_Discount  :",total_bill)
     print("you have saved\t\t   :",Discount+(Discount2))
@@ -204,19 +204,21 @@ elif(Item_Name.lower()=="sugar"):
     price=30
     print("Price\t\t\t   :",price)
     subtotal=price*Quantity
-    print("subtotal\t\t   :",subtotal)
+    print("subtotal\t\t   :",subtotal,end="\t")
     if(Quantity>10):
         Discount=0.05*subtotal
-        print("Discount\t\t   :",Discount)
     else:
         Discount=0
+    print("Discount\t\t   :",Discount)        
     total=subtotal-Discount
     print("total \t\t\t   :",total)
     Discount2=0
     loyal=input("is loayal member(yes/no)   :")    
     if(loyal.lower()=='yes'):
         Discount2=0.1*total
-        print("Discount for loyal\t   :",Discount2)
+    print("Discount for loyal\t   :",Discount2,end="\t")
     total_bill=total-Discount2
     print("total bill_After_Discount  :",total_bill)
     print("you have saved\t\t   :",Discount+(Discount2))
+else:
+    print("enter correct product Name:")
