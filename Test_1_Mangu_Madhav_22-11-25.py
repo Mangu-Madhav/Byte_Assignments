@@ -13,7 +13,7 @@
 #1 Print your name 5 times using only while loop. 
 i=5
 while(i>0):
-    print("Mangu Madhav")
+    print("Madhav")
     i-=1
 
 
