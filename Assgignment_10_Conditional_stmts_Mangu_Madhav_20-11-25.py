@@ -110,7 +110,7 @@ else:
     print("enter valid number")
 
 
-# In[45]:
+# In[54]:
 
 
 # 9. Electricity Bill Category: Use match-case for type
@@ -136,6 +136,7 @@ match(x):
     case _:
         print("enter only the no.of units used")
 
+
 # In[39]:
 
 
@@ -155,70 +156,81 @@ match(op):
     case _:print("enter valid operator")
 
 
+# In[14]:
+
+
 # Project
 # 1. Core Billing Logic (Using if-else and if)
-Item_Name=input("enter Item Name\t\t   :")
-Quantity=float(input("enter Quantity of the item :"))
-if(Item_Name.lower()=="rice"):
-    price=50
-    print("Price\t\t\t   :",price)
-    subtotal=price*Quantity
-    print("subtotal\t\t   :",subtotal,end="\t")
-    if(Quantity>10):
-        Discount=0.05*subtotal
+option='yes'
+sum=0
+total_bill=0
+total=0
+sum_discount=0
+while(option=='yes'):
+    subtotal=0
+    print("Items:Rice,dal,Sugar")
+    Item_Name=input("enter Item Name\t\t   :")
+    if(Item_Name.lower()=="rice"):
+        Quantity=float(input("enter Quantity of the item :"))
+        price=50
+        print("Price\t\t\t   :",price)
+        subtotal=price*Quantity
+        print("subtotal\t\t   :",subtotal,end="\t")
+        if(Quantity>10):
+            Discount=0.05*subtotal
+        else:
+            Discount=0
+        sum_discount+=Discount
+        print("Sub_Discount\t\t   :",Discount)        
+        total=total+(subtotal-Discount)
+        # print("total \t\t\t   :",total)
+    elif(Item_Name.lower()=="dal"):
+        Quantity=float(input("enter Quantity of the item :"))
+        price=40
+        print("Price\t\t\t   :",price)
+        subtotal=price*Quantity
+        print("subtotal\t\t   :",subtotal,end="\t")
+        if(Quantity>10):
+            Discount=0.05*subtotal
+        else:
+            Discount=0
+        sum_discount+=Discount   
+        print("Sub_Discount\t\t   :",Discount)        
+        total=total+(subtotal-Discount)
+        # print("total \t\t\t   :",total)
+        
+    elif(Item_Name.lower()=="sugar"):
+        Quantity=float(input("enter Quantity of the item :"))
+        price=30
+        print("Price\t\t\t   :",price)
+        subtotal=price*Quantity
+        print("subtotal\t\t   :",subtotal,end="\t")
+        if(Quantity>10):
+            Discount=0.05*subtotal
+        else:
+            Discount=0
+        print("sub_discount\t\t   :",Discount)        
+        total=total+(subtotal-Discount)
+        # print("total \t\t\t   :",total)
+        
     else:
-        Discount=0
-    print("Discount\t\t   :",Discount)        
-    total=subtotal-Discount
-    print("total \t\t\t   :",total)
-    Discount2=0
-    loyal=input("is loayal member(yes/no)   :")    
-    if(loyal.lower()=='yes'):
-        Discount2=0.1*total
-    print("Discount for loyal\t   :",Discount2,end="\t")
-    total_bill=total-Discount2
-    print("total bill_After_Discount  :",total_bill)
-    print("you have saved\t\t   :",Discount+(Discount2))
+        print("enter correct product Name:")
+    option=input("Do you want to continue(yes/no)")
     
-elif(Item_Name.lower()=="dal"):
-    price=40
-    print("Price\t\t\t   :",price)
-    subtotal=price*Quantity
-    print("subtotal\t\t   :",subtotal,end="\t")
-    if(Quantity>10):
-        Discount=0.05*subtotal
-    else:
-        Discount=0
-    print("Discount\t\t   :",Discount)        
-    total=subtotal-Discount
-    print("total \t\t\t   :",total)
-    Discount2=0
-    loyal=input("is loayal member(yes/no)   :")    
-    if(loyal.lower()=='yes'):
-        Discount2=0.1*total
-    print("Discount for loyal\t   :",Discount2,end="\t")
-    total_bill=total-Discount2
-    print("total bill_After_Discount  :",total_bill)
-    print("you have saved\t\t   :",Discount+(Discount2))
-elif(Item_Name.lower()=="sugar"):
-    price=30
-    print("Price\t\t\t   :",price)
-    subtotal=price*Quantity
-    print("subtotal\t\t   :",subtotal,end="\t")
-    if(Quantity>10):
-        Discount=0.05*subtotal
-    else:
-        Discount=0
-    print("Discount\t\t   :",Discount)        
-    total=subtotal-Discount
-    print("total \t\t\t   :",total)
-    Discount2=0
-    loyal=input("is loayal member(yes/no)   :")    
-    if(loyal.lower()=='yes'):
-        Discount2=0.1*total
-    print("Discount for loyal\t   :",Discount2,end="\t")
-    total_bill=total-Discount2
-    print("total bill_After_Discount  :",total_bill)
-    print("you have saved\t\t   :",Discount+(Discount2))
-else:
-    print("enter correct product Name:")
+Discount2=0
+loyal=input("is loayal member(yes/no)   :")    
+if(loyal.lower()=='yes'):
+    Discount2=0.1*total
+sum_discount+=Discount2
+print("Discount for loyal\t   :",Discount2,end="\t")
+total_bill=total-Discount2
+print("total bill_After_Discount  :",total_bill)
+print("you have saved\t\t   :",sum_discount)
+    
+
+
+# In[ ]:
+
+
+
+
