@@ -229,6 +229,122 @@ print("you have saved\t\t   :",sum_discount)
     
 
 
+# In[14]:
+
+
+# 2. Tiered Discounts & Surcharges
+Total_amount=float(input("enter total amount on purchased products"))
+Discount=0
+if(Total_amount<100):
+    Discount=0
+    print("You have got Discount",Discount)
+elif(Total_amount<500):
+    Disount=0.05*Total_amount
+    print("You have got Discount",Discount)
+elif(Total_amount<1000):
+    Discount=0.1*Total_amount
+    print("You have got Discount",Discount)
+else:
+    Discount=0.15*Total_amount
+    print("You have got Discount",Discount)
+Total_amount=Total_amount-Discount
+print("Total_bill is:",Total_amount)
+ch=int(input("\nChoose payment method\n1.Credit_card\n2.Debit_card\n3.Cash\n"))
+match(ch):
+    case 1:
+        fee=0.02*Total_amount
+        Total_amount=Total_amount+fee
+        print("Charges applied using Credit card :",fee)
+        print("Total bill :",Total_amount)
+    case 2:
+        fee=0.1*Total_amount
+        Total_amount=Total_amount+fee
+        print("Charges applied using Credit card :",fee)
+        print("Total bill :",Total_amount)
+    case 3:
+        discount=0.05*Total_amount
+        Total_amount=Total_amount-discount
+        print("You have got additional discount of ",discount)
+        print("Total bill is:",Total_amount)
+    case _:
+        print("Choos valid payment method")
+
+
+# In[17]:
+
+
+# 3. Special Conditions (Using Nested if)
+Cust_Id=int(input("enter customer id"))
+is_delivery=input("Is it delivery product(yes/no)")
+Total_amount=0
+delivery_fee=0
+if(is_delivery.lower()=='yes'):
+    delivery_amount=float(input("Total price of the delivery order"))
+    if(delivery_amount>500):
+        print("CONGRATULATIONS!!!..You are Eligible for FREE delivary")
+    else:
+        print("delivery fee applied:50")
+        delivery_fee=50
+        Total_amount=delivery_amount+delivery_fee
+else:
+    print("NO delivery fee is applied")
+is_premium_member=input("IS premium customer(yes/no)")
+if(is_premium_member.lower()=='yes'):
+    if(Total_amount>200):
+        Bonus_points=50
+        print("you have got bonus points of",Bonus_points)
+    else:
+        Bonus_points=10
+        print("you have got bonus points of",Bonus_points)
+    Special_Discount=0.05*Total_amount
+    print("You have got 5% of special discount on premium subscription")
+    Total_amount=Total_amount-Special_Discount
+else:
+    Normal_points=5
+    print("you have got",Normal_points,"points")
+print("Your Total amount is",Total_amount)
+
+
+# In[29]:
+
+
+# 4. Tax/VAT Calculation (Using match-case )
+Cust_Id=int(input("enter customer id"))
+ch='yes'
+Tax_Amount=0
+Total_of_sub=0
+Total_amount=0
+while(ch!='no'):
+    name=input("enter product name:")
+    price=eval(input("enter price of the product"))
+    Quantity=eval(input("enter quantity of the"))
+    sub_total=price*Quantity
+    print("Product Name",name,"\nTotal Product Price :",sub_total)
+    
+    Total_of_sub=Total_of_sub+sub_total
+    op=int(input("select category of the product\n1.Essentials\n2.Luxury Goods\n3.Electronics"))
+    match(op):
+        case 1:
+            Tax_Amount=Tax_Amount+(0.05*sub_total)
+            print("Tax applied on the product is:",0.05*sub_total)
+        case 2:
+            Tax_Amount=Tax_Amount+(0.20*sub_total)
+            print("Tax applied on the product is:",0.20*sub_total)
+        case 3:
+            Tax_Amount=Tax_Amount+(0.12*sub_total)
+            print("Tax applied on the product is:",0.12*sub_total)
+        case _:
+            print("\nselect correct category")
+    ch=input("\nDo you want to buy more products(yes/no)")
+Total_amount=Total_of_sub+Tax_Amount
+print("\nTotal price of all the products is",Total_of_sub)
+print("Total Tax on All products is",Tax_Amount)
+print("Total amount due is",Total_amount)
+    
+    
+    
+
+
 # In[ ]:
 
 
