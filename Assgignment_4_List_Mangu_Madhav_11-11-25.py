@@ -31,9 +31,9 @@ print("list-3",l3)
 l1=[10,11,23,45,78,90,42,41]
 print("list-1",l1)
 l2=[]
-for i,val in enumerate(l1):
-    if(val>=40):
-        l2.append(val)
+for i in l1:
+    if(i>=40):
+        l2.append(i)
 print("list-2",l2)
 
 
@@ -42,11 +42,11 @@ print("list-2",l2)
 
 l1=[10,20,15,45,89,90,11,34]
 print("list-1",l1)
-l2=[]
-for i,val in enumerate(l1):
-    if(val%2==0):
-        l2.append(val)
-print("list-2",l2)
+l2=[0,1,5,7]
+l3=[]
+for i in l2:
+    l3.append(l1[i])
+print("list-2",l3)
 
 
 # In[ ]:
