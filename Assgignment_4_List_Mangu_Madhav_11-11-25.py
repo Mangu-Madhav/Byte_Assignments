@@ -19,10 +19,9 @@ l1=[10,11,13,14]
 l2=[5,6,7,8,9]
 print("list-1",l1)
 print("list-2",l2)                    
-l3=l2
-for i,val in enumerate(l1):
-        l3.insert(i,val+l2[i])
-        del l3[i+1]
+l3=[]
+for i in range(4):
+    l3.append(l1[i]+l2[i])
 print("list-3",l3)
 
 
