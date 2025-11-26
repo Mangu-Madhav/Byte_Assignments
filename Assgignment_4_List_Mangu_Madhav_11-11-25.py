@@ -7,8 +7,8 @@
 l1=[10,11,13,14]
 print("list 1",l1)
 l2=[]
-for i,val in enumerate(l1):
-    l2.append(val+10)
+for i in l1:
+    l2.append(i+10)
 print("list-2",l2)
 
 
