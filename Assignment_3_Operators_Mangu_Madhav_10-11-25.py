@@ -34,11 +34,11 @@ print(userInput)
 
 a=float(input("enter any number"))
 if(a>0):
-    print("positive number")
+    print(a,"is positive number")
 if(a<0):
-       print("Negative number:")
+       print(a," is Negative number:")
 if(a==0):
-    print("Zero")
+    print(a,"is Zero")
 
 
 # **Question 4:** Write a Python program to find the largest of three numbers.
