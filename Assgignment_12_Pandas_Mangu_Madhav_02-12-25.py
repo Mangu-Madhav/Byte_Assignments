@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[76]:
+# In[57]:
 
 
 # Assignment: Data Selection, Modification, and Operations in Pandas
@@ -29,7 +29,7 @@ print("multiple rows [2, 4, 7] and all columns\n",df.iloc[[2,4,7],:])
 print("rows [1, 3, 5] and columns ['B', 'D']\n",df.loc[[1,3,5],["B","D"]])
 
 
-# In[75]:
+# In[58]:
 
 
 # Part B: Data Modification
@@ -56,10 +56,23 @@ df=df.drop(columns="B")
 df
 
 
-# In[ ]:
+# In[61]:
 
 
-
+# Part C: Deleting Values
+# 3.a. Delete a single value in the DataFrame by setting it to NaN.
+# b. Drop row 3 entirely.
+# c. Drop column D.
+# d. Drop multiple columns ['B', 'E'].
+# e. Drop multiple rows [0,2,5].
+df.loc[5,"C"]=np.nan
+print("Delete a single value in the DataFrame by setting it to NaN\n",df)
+print("Drop row 3 entirely:\n",df.drop(index=2))
+print("Drop row 3 entirely\n",df)
+print("Drop column D:\n",df.drop(columns="D"))
+print("Drop multiple columns ['B', 'E']:\n",df.drop(columns="E"))
+print("Drop multiple rows [0,2,5]:\n",df.drop(index=[0,2,5]))
+df
 
 
 # In[ ]:
