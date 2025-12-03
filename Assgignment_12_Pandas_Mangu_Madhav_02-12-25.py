@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[102]:
+# In[1]:
 
 
 # Assignment: Data Selection, Modification, and Operations in Pandas
@@ -29,7 +29,7 @@ print("multiple rows [2, 4, 7] and all columns\n",df.iloc[[2,4,7],:])
 print("rows [1, 3, 5] and columns ['B', 'D']\n",df.loc[[1,3,5],["B","D"]])
 
 
-# In[103]:
+# In[2]:
 
 
 # Part B: Data Modification
@@ -56,7 +56,7 @@ print("drop index B\n",df.drop(columns="B"))
 a
 
 
-# In[104]:
+# In[3]:
 
 
 # Part C: Deleting Values
@@ -75,7 +75,7 @@ print("Drop multiple rows [0,2,5]:\n",df.drop(index=[0,2,5]))
 df
 
 
-# In[105]:
+# In[9]:
 
 
 # Part D: Mathematical Operations
@@ -88,10 +88,11 @@ df["A"]+=10
 print("Added 10 to all values in column A\n",df)
 df["B"]*=2
 print("Multiply column B by 2\n",df)
-# print("Calculate the sum of row 5",df.sum(index=5))
+print("Calculate the sum of row 5:", df.iloc[4].sum())
 
 
-# In[108]:
+
+# In[4]:
 
 
 # Part E: Conditional Selection
