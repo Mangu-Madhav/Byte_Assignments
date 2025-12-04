@@ -102,8 +102,6 @@ print("Calculate the sum of row 5:", df.iloc[4].sum())
 print(a)
 print("Extract all rows where column A > 50\n",a[a["A"]>50])
 print("Extract all rows where column B < 30 and column D > 10\n",a[(a["B"]<30) & (a["D"]>10)])
-# 
-# a[a.loc[:,"C"]<50]=0
 a.loc[a["C"] < 20, "C"] = 0
 print("Replace all values in column C where value < 20 with 0\n",a)
 
