@@ -125,20 +125,6 @@ print("using loc:\n",a.loc[[1,3,7],["C","E"]])
 print("using iloc:\n",a.iloc[[1,6,9]])
 
 
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
 
 
 
