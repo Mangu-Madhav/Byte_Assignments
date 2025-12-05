@@ -49,7 +49,6 @@ for i in l2:
 print("list-2",l3)
 
 
-# In[ ]:
 
 
 
