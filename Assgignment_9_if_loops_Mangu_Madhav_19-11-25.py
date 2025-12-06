@@ -74,7 +74,7 @@ while(n<11):
 # In[11]:
 
 
-# 7 Write a program that prints a 5x5 grid of asterisks (*) using nested loops
+#7 Write a program that prints a 5x5 grid of asterisks (*) using nested loops
 for i in range(1,6):
    for j in range(1,6):
        print("*",end="\t")
@@ -84,7 +84,7 @@ for i in range(1,6):
 # In[13]:
 
 
-# 8 Write a program that asks the user to input numbers until they input 0. The
+#8 Write a program that asks the user to input numbers until they input 0. The
 # program should print the sum of all the input numbers.
 sum=0
 num=int(input("enter a number"))
