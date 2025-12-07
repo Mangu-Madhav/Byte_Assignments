@@ -33,6 +33,7 @@ print("rows [1, 3, 5] and columns ['B', 'D']\n",df.loc[[1,3,5],["B","D"]])
 
 
 # Part B: Data Modification
+
 # 2.Using the same DataFramedf:
 # a. Add a new column E with values [10,20,...] corresponding to row numbers.
 # b. Remove the column C.
@@ -60,6 +61,7 @@ a
 
 
 # Part C: Deleting Values
+
 # 3.a. Delete a single value in the DataFrame by setting it to NaN.
 # b. Drop row 3 entirely.
 # c. Drop column D.
@@ -79,6 +81,7 @@ df
 
 
 # Part D: Mathematical Operations
+
 # 4.	a. Add 10 to all values in column A.
 # b. Multiply column B by 2.
 # c. Calculate the sum of row 5.
@@ -96,6 +99,7 @@ print("Calculate the sum of row 5:", df.iloc[4].sum())
 
 
 # Part E: Conditional Selection
+
 # 5.	a. Extract all rows where column A > 50.
 # b. Extract all rows where column B < 30 and column D > 10.
 # c. Replace all values in column C where value < 50 with 0.
@@ -110,6 +114,7 @@ print("Replace all values in column C where value < 20 with 0\n",a)
 
 
 # Part F: Bonus / Advanced
+
 # 6.a. Replace multiple rows and multiple columns with a single value (e.g., replace rows [1,2] and columns ['B','D'] with 999).
 # 7.b. Replace multiple rows and multiple columns with different values.
 # 8.c. Extract values using iloc and loc for specific positions and labels.
