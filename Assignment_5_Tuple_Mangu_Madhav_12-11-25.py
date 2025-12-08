@@ -73,7 +73,7 @@ for val in range(-10,-17,-1):
 # In[13]:
 
 
-# 5 Generate 10 9  8 7 6 5 4 3 2 1
+#5 Generate 10 9  8 7 6 5 4 3 2 1
 #Approach 1
 print("=======")
 r=range(10,0,-1)
@@ -87,7 +87,7 @@ for val in range(10,0,-1):
 # In[16]:
 
 
-# 6 Generate: -10 -9 -8 -7 -6 -5 -4 -3 -2 -1
+#6 Generate: -10 -9 -8 -7 -6 -5 -4 -3 -2 -1
 #Approach 1
 r=range(-10,0)
 for val in r:
