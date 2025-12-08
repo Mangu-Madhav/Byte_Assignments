@@ -155,7 +155,7 @@ for val in range(-20,-9,2):
 # In[28]:
 
 
-# 11 Generate: -1000 -900 -800 -700 -600 -500
+#11 Generate: -1000 -900 -800 -700 -600 -500
 r=range(-1000,-400,100)
 for val in r:
     print(val)
