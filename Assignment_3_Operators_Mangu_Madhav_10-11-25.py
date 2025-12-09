@@ -71,7 +71,7 @@ while(a>0):
 print(fact)
 
 
-# ## 2. Variables and Data Types
+# # 2. Variables and Data Types
 # 
 # **Question 6:** Create variables of different data types: integer, float, string, and boolean. Print their values and types.
 
