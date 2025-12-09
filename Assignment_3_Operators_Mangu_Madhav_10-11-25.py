@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # # Lesson 1.2: Python Basics
-# ## Topics Covered:
+# # Topics Covered:
 # - Syntax and Semantics
 # - Variables and Data Types
 # - Basic Operators (Arithmetic, Comparison, Logical)
