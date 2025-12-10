@@ -8,7 +8,7 @@
 # - Basic Operators (Arithmetic, Comparison, Logical)
 # 
 
-# # 1. Syntax and Semantics
+# 1. Syntax and Semantics
 # 
 # **Question 1:** Write a Python program to print "Hello, World!".
 
