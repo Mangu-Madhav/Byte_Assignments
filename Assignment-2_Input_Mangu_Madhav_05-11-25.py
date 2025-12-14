@@ -4,7 +4,7 @@
 # In[1]:
 
 
-# 1 Take two numbers as input and print their sum.
+#1 Take two numbers as input and print their sum.
 a=int(input("enter first number"))
 b=int(input("enter second number"))
 c=a+b
@@ -39,7 +39,7 @@ print(first_name,second_name)
 # In[9]:
 
 
-# 5 Take radius as input (float) and print the area of the circle using Area = r² (use =3.14).
+#5 Take radius as input (float) and print the area of the circle using Area = r² (use =3.14).
 r=float(input("enter radius of the circle"))
 area=3.14*(r**2)
 print("area of the circle is:",area)
