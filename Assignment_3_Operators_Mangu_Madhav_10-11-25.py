@@ -2,13 +2,13 @@
 # coding: utf-8
 
 # # Lesson 1.2: Python Basics
-# ## Topics Covered:
+# # Topics Covered:
 # - Syntax and Semantics
 # - Variables and Data Types
 # - Basic Operators (Arithmetic, Comparison, Logical)
 # 
 
-# ## 1. Syntax and Semantics
+# 1. Syntax and Semantics
 # 
 # **Question 1:** Write a Python program to print "Hello, World!".
 
@@ -71,7 +71,7 @@ while(a>0):
 print(fact)
 
 
-# ## 2. Variables and Data Types
+# 2. Variables and Data Types
 # 
 # **Question 6:** Create variables of different data types: integer, float, string, and boolean. Print their values and types.
 
@@ -128,7 +128,7 @@ a=5
 print(a,type(a))
 
 
-# ## 3. Basic Operators (Arithmetic, Comparison, Logical)
+#  3. Basic Operators (Arithmetic, Comparison, Logical)
 # 
 # **Question 11:** Write a Python program to perform arithmetic operations: addition, subtraction, multiplication, and division.
 
