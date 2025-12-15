@@ -57,7 +57,7 @@ print(f'product of {num} and 2 is {product}')
 # In[59]:
 
 
-# 7 Input a math expression as string and evaluate it (Example: 5*6*2).
+#7 Input a math expression as string and evaluate it (Example: 5*6*2).
 a=input("enter an expression to evaluate")
 #Not Possible from the concepts we learned
 
