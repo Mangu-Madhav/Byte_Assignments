@@ -15,7 +15,7 @@ if num>0:
 # In[9]:
 
 
-# 2 Write a program that asks the user to input a number and prints whether the
+#2 Write a program that asks the user to input a number and prints whether the
 #  number is positive or negative.
 num=eval(input("enter a number"))
 if num>=0:
