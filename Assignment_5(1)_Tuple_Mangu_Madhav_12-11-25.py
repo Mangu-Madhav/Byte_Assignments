@@ -4,7 +4,7 @@
 # In[1]:
 
 
-##1: Creating and Accessing Tuples
+##1:Creating and Accessing Tuples
 #Create a tuple with the first 10 positive integers. Print the tuple.
 t=(1,2,3,4,5,6,7,8,9,10)
 print(t,type(t))
