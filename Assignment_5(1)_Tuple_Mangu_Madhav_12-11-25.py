@@ -13,7 +13,7 @@ print(t,type(t))
 # In[2]:
 
 
-# 2: Accessing Tuple Elements
+#2: Accessing Tuple Elements
 #Print the first, middle, and last elements of the tuple created in Assignment 1.
 t=(1,2,3,4,5,6,7,8,9,10)
 l=len(t)
@@ -23,7 +23,7 @@ print(t[0],t[l//2],t[l-1])
 # In[3]:
 
 
-##  3: Tuple Slicing
+#3: Tuple Slicing
 #Print the first three elements, the last three elements, and the elements from index 2 to 5 of the tuple created in Assignment 1.
 t=(1,2,3,4,5,6,7,8,9,10)
 print(t[0:3],t[-1:-4:-1],t[2:5])
