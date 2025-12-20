@@ -69,13 +69,6 @@ print(df1.mode())
 # Modified Dataset with Outlier:[50,52,53,55,57,60,62,64,65,100]
 
 
-# In[ ]:
-
-
-
-
-
-# In[ ]:
 
 
 
