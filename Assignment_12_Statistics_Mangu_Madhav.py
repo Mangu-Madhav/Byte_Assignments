@@ -60,7 +60,7 @@ print(df1.median())
 print(df1.mode())
 
 
-# In[11]:
+# In[18]:
 
 
 # 5. Calculate the the mean,median,and mode for the following dataset. Then add an outlier value of 100 and 
@@ -69,12 +69,16 @@ print(df1.mode())
 # Modified Dataset with Outlier:[50,52,53,55,57,60,62,64,65,100]
 df1=pd.DataFrame([50,52,53,55,57,60,62,64,65])
 df1
-print("mean of the data is",df1.mean())
-print("mode of the data is",df1.mode())
-print("median of the data is",df1.median())
+print("mean of the data is \n",df1.mean())
+print("mode of the data is \n",df1.mode())
+print("median of the data is \n",df1.median())
 print(df1)
 df1=df1.rename(columns={0:"x"})
-df1
+df1.loc[9,"x"]=100
+print("====>\n",df1)
+print("mean of the data is \n",df1.mean())
+print("mode of the data is \n",df1.mode())
+print("median of the data is \n",df1.median())
 
 
 # In[ ]:
