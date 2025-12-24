@@ -4,7 +4,7 @@
 # In[1]:
 
 
-# 1. Login Verification: Check if the entered password equals 'admin123'.
+#1. Login Verification: Check if the entered password equals 'admin123'.
 password='admin123'
 user_password=input("enter the password")
 if(password==user_password):
@@ -14,7 +14,7 @@ if(password==user_password):
 # In[3]:
 
 
-# 2. Age Eligibility: Check if age ≥ 18 for A-rated movie.
+#2. Age Eligibility: Check if age ≥ 18 for A-rated movie.
 age=int(input("enter your age"))
 if(age>=18):
     print("you are eligible ")
