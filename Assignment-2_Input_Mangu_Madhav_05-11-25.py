@@ -74,7 +74,7 @@ print(b)
 # In[15]:
 
 
-# 9 Take a float as input, convert it to integer and print both values.
+#9 Take a float as input, convert it to integer and print both values.
 a=float(input("enter a float number"))
 b=int(a)
 print(f'float value is {a} and int value is {b}')
