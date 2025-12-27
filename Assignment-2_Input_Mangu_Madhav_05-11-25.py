@@ -83,7 +83,7 @@ print(f'float value is {a} and int value is {b}')
 # In[16]:
 
 
-# 10 program to Ask the user for their name and print: Welcome,
+#10 program to Ask the user for their name and print: Welcome,
 name=input("enter your name")
 print(f'Welcome, {name}')
 
