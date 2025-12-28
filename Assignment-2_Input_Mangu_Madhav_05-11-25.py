@@ -266,7 +266,7 @@ print(div,type(div))
 # In[53]:
 
 
-# 29 Program to Check the boolean value of x (x=20)
+#29 Program to Check the boolean value of x (x=20)
 x=20
 y=bool(x)
 print(y)
