@@ -275,7 +275,7 @@ print(y)
 # In[54]:
 
 
-# 30 Program to Check the boolean value of x (x=0).
+#30 Program to Check the boolean value of x (x=0).
 x=0
 y=bool(x)
 print(x)
