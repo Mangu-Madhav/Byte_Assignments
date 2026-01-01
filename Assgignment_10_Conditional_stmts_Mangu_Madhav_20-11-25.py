@@ -66,7 +66,7 @@ else:
 # In[16]:
 
 
-#  6. Credit Card Eligibility: Salary and CIBIL nested check.
+#6. Credit Card Eligibility: Salary and CIBIL nested check.
 salary=float(input("enter your salary"))
 cibil=float(input("enter your cibil score"))
 if(salary>30000):
