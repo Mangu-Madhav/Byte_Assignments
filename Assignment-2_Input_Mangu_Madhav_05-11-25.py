@@ -101,7 +101,7 @@ print(result)
 # In[19]:
 
 
-# 12 program to Multiply x * y and then subtract (x=10, y=3).
+#12 program to Multiply x * y and then subtract (x=10, y=3).
 x,y=10,3
 multiple=x*y
 subtraction=x-y
