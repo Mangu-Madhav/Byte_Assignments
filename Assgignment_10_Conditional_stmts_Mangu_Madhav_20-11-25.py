@@ -33,7 +33,7 @@ if(recharge_plan>=199):
 # In[8]:
 
 
-# 4.Student Grade Checker: Assign grades based on marks.
+#4.Student Grade Checker: Assign grades based on marks.
 marks=int(input("enter your marks"))
 if(marks>=90):
     print("Grade : A, EXCELLENT!!!")
@@ -81,7 +81,7 @@ else:
 # In[26]:
 
 
-# 7. ATM Withdrawal Validator: Check balance + multiple of 100.
+#7. ATM Withdrawal Validator: Check balance + multiple of 100.
 withdraw=float(input("enter amount to be withdraw"))
 balance=200000
 if(withdraw<balance):
