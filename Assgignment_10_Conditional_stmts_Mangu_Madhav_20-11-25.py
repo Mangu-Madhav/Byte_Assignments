@@ -113,7 +113,7 @@ else:
 # In[54]:
 
 
-# 9. Electricity Bill Category: Use match-case for type
+#9. Electricity Bill Category: Use match-case for type
 E_bill=float(input("enter units used"))
 if(E_bill<100):
     x='a'
