@@ -140,7 +140,7 @@ match(x):
 # In[39]:
 
 
-# 10 Simple Calculator: Use match-case for +, -, *, /.
+#10 Simple Calculator: Use match-case for +, -, *, /.
 n1=int(input("enter 1st number"))
 n2=int(input("enter 2nd number"))
 op=input("enter operator(+,-,*,/)")
