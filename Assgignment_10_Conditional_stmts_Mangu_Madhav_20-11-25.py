@@ -51,7 +51,7 @@ else:
 # In[13]:
 
 
-#5. Temperature Alert System: Categorize weather by temperature.
+#5.Temperature Alert System: Categorize weather by temperature.
 Temp=eval(input("enter the temperature"))
 if(Temp>40):
     print("It's Better to stay at home,it's too hot at outside")
