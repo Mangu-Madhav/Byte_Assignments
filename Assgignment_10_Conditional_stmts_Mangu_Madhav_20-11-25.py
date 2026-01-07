@@ -232,7 +232,7 @@ print("you have saved\t\t   :",sum_discount)
 # In[14]:
 
 
-# 2. Tiered Discounts & Surcharges
+#2. Tiered Discounts & Surcharges
 Total_amount=float(input("enter total amount on purchased products"))
 Discount=0
 if(Total_amount<100):
