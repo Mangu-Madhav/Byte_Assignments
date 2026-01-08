@@ -273,7 +273,7 @@ match(ch):
 # In[17]:
 
 
-# 3. Special Conditions (Using Nested if)
+#3. Special Conditions (Using Nested if)
 Cust_Id=int(input("enter customer id"))
 is_delivery=input("Is it delivery product(yes/no)")
 Total_amount=0
