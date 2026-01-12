@@ -160,7 +160,7 @@ match(op):
 
 
 # Project
-# 1. Core Billing Logic (Using if-else and if)
+#1. Core Billing Logic (Using if-else and if)
 option='yes'
 sum=0
 total_bill=0
