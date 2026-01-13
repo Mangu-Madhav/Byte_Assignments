@@ -217,7 +217,7 @@ print(a*b)
 
 #24  Program to Add float 2.5 with int 4. What is the output?
 # Ans: 6.5
-# proof
+#proof
 a-2.5
 b=4
 print(a+b)
