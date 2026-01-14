@@ -20,7 +20,7 @@ while(i<=5):
 # In[3]:
 
 
-# 2 Print numbers 1 to 10 using only while loop. 
+#2 Print numbers 1 to 10 using only while loop. 
 i=1
 while(i<11):
     print(i)
