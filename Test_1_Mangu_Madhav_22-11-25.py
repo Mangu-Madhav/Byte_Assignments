@@ -30,7 +30,7 @@ while(i<11):
 # In[4]:
 
 
-# 3 Print numbers 10 down to 1 using only while loop.
+#3 Print numbers 10 down to 1 using only while loop.
 i=10
 while(i>0):
     print(i)
