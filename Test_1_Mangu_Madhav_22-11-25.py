@@ -40,7 +40,7 @@ while(i>0):
 # In[1]:
 
 
-# 4 Take a number from user and print its multiplication table (up to 10) using while loop
+#4 Take a number from user and print its multiplication table (up to 10) using while loop
 n=int(input("enter any number to give its multiplication table"))
 i=1
 print("multiplication table of ",n)
