@@ -52,7 +52,7 @@ while(i<11):
 # In[2]:
 
 
-# 5 Keep asking for password until user enters "analytics2025" → print "Login Success!". 
+#5 Keep asking for password until user enters "analytics2025" → print "Login Success!". 
 n=input("enter password")
 while(n!='analytics2025'):
     print("Please enter correct password")
