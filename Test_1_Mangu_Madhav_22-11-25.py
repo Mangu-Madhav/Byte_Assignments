@@ -64,7 +64,7 @@ else:
 # In[3]:
 
 
-# 6 Add numbers continuously until user enters 0, then print the sum of all entered numbers.
+#6 Add numbers continuously until user enters 0, then print the sum of all entered numbers.
 n=int(input("enter any number"))
 sum=0
 while(n!=0):
