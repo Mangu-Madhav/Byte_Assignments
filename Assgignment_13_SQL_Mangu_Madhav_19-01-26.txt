@@ -1,0 +1,578 @@
+SQL> -->Scenario 1: Employee Management System
+SQL> -->Table: employees(emp_id, emp_name, department, salary, status)
+SQL> create table employees(
+  2  emp_id number(3),
+  3  emp_name varchar2(20),
+  4  department varchar(15),
+  5  salary number(5),
+  6  status varchar2(10));
+
+Table created.
+
+SQL> desc employees;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMP_ID                                             NUMBER(3)
+ EMP_NAME                                           VARCHAR2(20)
+ DEPARTMENT                                         VARCHAR2(15)
+ SALARY                                             NUMBER(5)
+ STATUS                                             VARCHAR2(10)
+
+SQL> insert into employees(emp_id,emp_name,department,salary,status)
+  2  values(&emp_id,'&emp_name','&department',&salary,'&status');
+Enter value for emp_id: 100
+Enter value for emp_name: xyz
+Enter value for department: IT
+Enter value for salary: 50000
+Enter value for status: Active
+old   2: values(&emp_id,'&emp_name','&department',&salary,'&status')
+new   2: values(100,'xyz','IT',50000,'Active')
+
+1 row created.
+
+SQL> /
+Enter value for emp_id: 101
+Enter value for emp_name: wxy
+Enter value for department: Non-IT
+Enter value for salary: 45000
+Enter value for status: Active
+old   2: values(&emp_id,'&emp_name','&department',&salary,'&status')
+new   2: values(101,'wxy','Non-IT',45000,'Active')
+
+1 row created.
+
+SQL> /
+Enter value for emp_id: 102
+Enter value for emp_name: abc
+Enter value for department: IT
+Enter value for salary: 55000
+Enter value for status: inactive
+old   2: values(&emp_id,'&emp_name','&department',&salary,'&status')
+new   2: values(102,'abc','IT',55000,'inactive')
+
+1 row created.
+
+SQL> /
+Enter value for emp_id: 103
+Enter value for emp_name: allen
+Enter value for department: HR
+Enter value for salary: 60000
+Enter value for status: Active
+old   2: values(&emp_id,'&emp_name','&department',&salary,'&status')
+new   2: values(103,'allen','HR',60000,'Active')
+
+1 row created.
+
+SQL> /
+Enter value for emp_id: 104
+Enter value for emp_name: trump
+Enter value for department: Sales
+Enter value for salary: 53000
+Enter value for status: inactive
+old   2: values(&emp_id,'&emp_name','&department',&salary,'&status')
+new   2: values(104,'trump','Sales',53000,'inactive')
+
+1 row created.
+
+SQL> 105
+SP2-0226: Invalid line number 
+SQL> /
+Enter value for emp_id: 105
+Enter value for emp_name: raju
+Enter value for department: Accounts
+Enter value for salary: 61000
+Enter value for status: inactive
+old   2: values(&emp_id,'&emp_name','&department',&salary,'&status')
+new   2: values(105,'raju','Accounts',61000,'inactive')
+
+1 row created.
+
+SQL> -->2. Display employees working in IT department.
+SQL> select * from employees where department='IT';
+
+    EMP_ID EMP_NAME             DEPARTMENT          SALARY STATUS               
+---------- -------------------- --------------- ---------- ----------           
+       100 xyz                  IT                   50000 Active               
+       102 abc                  IT                   55000 inactive             
+
+SQL> -->3. Increase salary by 10% for employees earning below 40000.
+SQL> update employees set salary=salary+(salary*0.1) where salary <51000
+  2  ;
+
+2 rows updated.
+
+SQL> select * from employess;
+select * from employess
+              *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> select * from employees;
+
+    EMP_ID EMP_NAME             DEPARTMENT          SALARY STATUS               
+---------- -------------------- --------------- ---------- ----------           
+       100 xyz                  IT                   55000 Active               
+       101 wxy                  Non-IT               49500 Active               
+       102 abc                  IT                   55000 inactive             
+       103 allen                HR                   60000 Active               
+       104 trump                Sales                53000 inactive             
+       105 raju                 Accounts             61000 inactive             
+
+6 rows selected.
+
+SQL> -->4.Create a SAVEPOINT after salary update.
+SQL> savepoint after_salary_update;
+
+Savepoint created.
+
+SQL> -->5. Delete employees whose status is INACTIVE.
+SQL> delete from employees where status='inactive';
+
+3 rows deleted.
+
+SQL> -->6. Rollback only delete operation.
+SQL> rollback to after_salary_update;
+
+Rollback complete.
+
+SQL> -->7. Commit final changes.
+SQL> commit;
+
+Commit complete.
+
+SQL> 
+SQL> 
+SQL> -->Scenario 2: Bank Transaction System
+SQL> -->Table: bank_accounts(account_no, customer_name, balance, status)
+SQL> create table bank_accounts(
+  2  account_no number(10),
+  3  customer_name varchar2(15),
+  4  balance number(10),
+  5  status varchar2(15));
+
+Table created.
+
+SQL> insert into bank_accounts(account_no,customer_name,balance,status)
+  2  values(1234,'Ravi',120000,'Active');
+
+1 row created.
+
+SQL> /
+
+1 row created.
+
+SQL> insert into bank_accounts(account_no,customer_name,balance,status)
+  2  values(1233,'Ravi',140000,'Active');
+
+1 row created.
+
+SQL> insert into bank_accounts(account_no,customer_name,balance,status)
+  2  values(1244,'Raju',140000,'inactive');
+
+1 row created.
+
+SQL> -->2. Transfer 10000 from one account to another.
+SQL> select * from bank_accounts;
+
+ACCOUNT_NO CUSTOMER_NAME      BALANCE STATUS                                    
+---------- --------------- ---------- ---------------                           
+      1234 Ravi                120000 Active                                    
+      1234 Ravi                120000 Active                                    
+      1233 Ravi                140000 Active                                    
+      1244 Raju                140000 inactive                                  
+
+SQL> update bank_accounts set balance =balance-10000
+  2  where account_no=1244;
+
+1 row updated.
+
+SQL> select * from bank_accounts;
+
+ACCOUNT_NO CUSTOMER_NAME      BALANCE STATUS                                    
+---------- --------------- ---------- ---------------                           
+      1234 Ravi                120000 Active                                    
+      1234 Ravi                120000 Active                                    
+      1233 Ravi                140000 Active                                    
+      1244 Raju                130000 inactive                                  
+
+SQL> savepoint after_debit;
+
+Savepoint created.
+
+SQL> -->4. Rollback if credit fails.
+SQL> update bank_accounts set balance=balance+10000
+  2  where account_no=1233;
+
+1 row updated.
+
+SQL> select * from bank_accounts;
+
+ACCOUNT_NO CUSTOMER_NAME      BALANCE STATUS                                    
+---------- --------------- ---------- ---------------                           
+      1234 Ravi                120000 Active                                    
+      1234 Ravi                120000 Active                                    
+      1233 Ravi                150000 Active                                    
+      1244 Raju                130000 inactive                                  
+
+SQL> -->5. Display final balances.
+SQL> select account_no,customer_name,balance from bank_accounts;
+
+ACCOUNT_NO CUSTOMER_NAME      BALANCE                                           
+---------- --------------- ----------                                           
+      1234 Ravi                120000                                           
+      1234 Ravi                120000                                           
+      1233 Ravi                150000                                           
+      1244 Raju                130000                                           
+
+SQL> -->6. Commit transaction.
+SQL> commit;
+
+Commit complete.
+
+SQL> -->Scenario 3: Online Order Processing
+SQL> -->Table: orders(order_id, customer_name, total_amount, order_status)
+SQL> create table orders(
+  2  order_id number(3),
+  3  customer_name varchar2(15),
+  4  total_amount number(6),
+  5  order_status varchar2(10));
+
+Table created.
+
+SQL> insert into orders(order_id,customer_id,total_amount,order_status)
+  2  
+SQL> insert into orders(order_id,customer_name,total_amount,order_status)
+  2  values(&order_id,'&customer_name',&total_amount,'&order_status');
+Enter value for order_id: 301
+Enter value for customer_name: Arjun
+Enter value for total_amount: 25000,
+Enter value for order_status: pending
+old   2: values(&order_id,'&customer_name',&total_amount,'&order_status')
+new   2: values(301,'Arjun',25000,,'pending')
+values(301,'Arjun',25000,,'pending')
+                         *
+ERROR at line 2:
+ORA-00936: missing expression 
+
+
+SQL> /
+Enter value for order_id: 301
+Enter value for customer_name: Arjun
+Enter value for total_amount: 25000
+Enter value for order_status: 'pending'
+old   2: values(&order_id,'&customer_name',&total_amount,'&order_status')
+new   2: values(301,'Arjun',25000,''pending'')
+values(301,'Arjun',25000,''pending'')
+                           *
+ERROR at line 2:
+ORA-00917: missing comma 
+
+
+SQL> /
+Enter value for order_id: 301
+Enter value for customer_name: arjun
+Enter value for total_amount: 25000
+Enter value for order_status: pending
+old   2: values(&order_id,'&customer_name',&total_amount,'&order_status')
+new   2: values(301,'arjun',25000,'pending')
+
+1 row created.
+
+SQL> /
+Enter value for order_id: 302
+Enter value for customer_name: sneha
+Enter value for total_amount: 60000
+Enter value for order_status: pending
+old   2: values(&order_id,'&customer_name',&total_amount,'&order_status')
+new   2: values(302,'sneha',60000,'pending')
+
+1 row created.
+
+SQL> /
+Enter value for order_id: 303
+Enter value for customer_name: vikram
+Enter value for total_amount: 45000
+Enter value for order_status: confirmed
+old   2: values(&order_id,'&customer_name',&total_amount,'&order_status')
+new   2: values(303,'vikram',45000,'confirmed')
+
+1 row created.
+
+SQL> /
+Enter value for order_id: 304
+Enter value for customer_name: Neha
+Enter value for total_amount: 80000
+Enter value for order_status: pending
+old   2: values(&order_id,'&customer_name',&total_amount,'&order_status')
+new   2: values(304,'Neha',80000,'pending')
+
+1 row created.
+
+SQL> -->2. Select PENDING orders.
+SQL> select * from orders
+  2  where order_status='pending';
+
+  ORDER_ID CUSTOMER_NAME   TOTAL_AMOUNT ORDER_STAT                              
+---------- --------------- ------------ ----------                              
+       301 arjun                  25000 pending                                 
+       302 sneha                  60000 pending                                 
+       304 Neha                   80000 pending                                 
+
+SQL> -->3. Update order status to CONFIRMED.
+SQL> update orders
+  2  set order_status='confirmed'
+  3  where order_status='pending';
+
+3 rows updated.
+
+SQL> savepoint status_confirmed
+  2  ;
+
+Savepoint created.
+
+SQL> -->5. Cancel orders above 50000.
+SQL> update orders
+  2  set order_status='cancelled'
+  3  where total_amount>50000;
+
+2 rows updated.
+
+SQL> select * from orders;
+
+  ORDER_ID CUSTOMER_NAME   TOTAL_AMOUNT ORDER_STAT                              
+---------- --------------- ------------ ----------                              
+       301 arjun                  25000 confirmed                               
+       302 sneha                  60000 cancelled                               
+       303 vikram                 45000 confirmed                               
+       304 Neha                   80000 cancelled                               
+
+SQL> -->6. Rollback cancellation.
+SQL> rollback to status_confirmed;
+
+Rollback complete.
+
+SQL> select * from orders;
+
+  ORDER_ID CUSTOMER_NAME   TOTAL_AMOUNT ORDER_STAT                              
+---------- --------------- ------------ ----------                              
+       301 arjun                  25000 confirmed                               
+       302 sneha                  60000 confirmed                               
+       303 vikram                 45000 confirmed                               
+       304 Neha                   80000 confirmed                               
+
+SQL> -->7. Commit updates.
+SQL> commit;
+
+Commit complete.
+
+SQL> -->
+SQL> -->Scenario 4: Student Enrollment System
+SQL> -->Table: students(student_id, name, course, fees_paid)
+SQL> create table students(
+  2  student_id number(4),
+  3  name varchar2(15),
+  4  course varchar2(15),
+  5  fees_paid varhcar2(15));
+fees_paid varhcar2(15))
+                  *
+ERROR at line 5:
+ORA-00907: missing right parenthesis 
+
+
+SQL> create table students(
+  2  student_id number(4),
+  3  name varchar2(15),
+  4  course varchar2(15),
+  5  fees_paid varchar2(15));
+
+Table created.
+
+SQL> -->1. Insert 6 students.
+SQL> INSERT INTO students VALUES (401, 'Amit',   'Java',   25000);
+
+1 row created.
+
+SQL> INSERT INTO students VALUES (402, 'Riya',   'Python',35000);
+
+1 row created.
+
+SQL> INSERT INTO students VALUES (403, 'Suresh', 'Java',   30000);
+
+1 row created.
+
+SQL> INSERT INTO students VALUES (404, 'Neha',   'Data Science',45000);
+
+1 row created.
+
+SQL> INSERT INTO students VALUES (405, 'Kiran',  'Java',   18000);
+
+1 row created.
+
+SQL> INSERT INTO students VALUES (406, 'Anjali', 'Python',22000);
+
+1 row created.
+
+SQL> select * from students;
+
+STUDENT_ID NAME            COURSE          FEES_PAID                            
+---------- --------------- --------------- ---------------                      
+       401 Amit            Java            25000                                
+       402 Riya            Python          35000                                
+       403 Suresh          Java            30000                                
+       404 Neha            Data Science    45000                                
+       405 Kiran           Java            18000                                
+       406 Anjali          Python          22000                                
+
+6 rows selected.
+
+SQL> -->2. Select students with fees_paid > 30000.
+SQL> select * from students where fees_paid > 30000;
+
+STUDENT_ID NAME            COURSE          FEES_PAID                            
+---------- --------------- --------------- ---------------                      
+       402 Riya            Python          35000                                
+       404 Neha            Data Science    45000                                
+
+SQL> -->3. Update fees for Java students.
+SQL> update students
+  2  set fees_paid=fees_paid+5000
+  3  where course='Java';
+
+3 rows updated.
+
+SQL> -->4. Create SAVEPOINT JAVA_FEES_UPDATED.
+SQL> SAVEPOINT JAVA_FEES_UPDATED;
+
+Savepoint created.
+
+SQL> delete from students where fees_paid<20000;
+
+0 rows deleted.
+
+SQL> delete from students where fees_paid<200000;
+
+6 rows deleted.
+
+SQL> -->6. Rollback to savepoint.
+SQL> rollback to JAVA_FEES_UPDATED;
+
+Rollback complete.
+
+SQL> select * from students;
+
+STUDENT_ID NAME            COURSE          FEES_PAID                            
+---------- --------------- --------------- ---------------                      
+       401 Amit            Java            30000                                
+       402 Riya            Python          35000                                
+       403 Suresh          Java            35000                                
+       404 Neha            Data Science    45000                                
+       405 Kiran           Java            23000                                
+       406 Anjali          Python          22000                                
+
+6 rows selected.
+
+SQL> -->7. Commit changes.
+SQL> commit;
+
+Commit complete.
+
+SQL> -->
+SQL> 
+SQL> 
+SQL> -->Scenario 5: Inventory Management
+SQL> -->Table: products(product_id, product_name, quantity, price)
+SQL> create table products
+  2  ( product_id number(3),
+  3  product_name varchar2(15),
+  4  quantity number(5),
+  5  price number(5));
+
+Table created.
+
+SQL> -->Insert 5 Products
+SQL> INSERT INTO products VALUES (501, 'Laptop',   10, 55000);
+
+1 row created.
+
+SQL> INSERT INTO products VALUES (502, 'Mouse',    50, 500);
+
+1 row created.
+
+SQL> INSERT INTO products VALUES (503, 'Keyboard', 0, 1200);
+
+1 row created.
+
+SQL> INSERT INTO products VALUES (504, 'Monitor',  5, 15000);
+
+1 row created.
+
+SQL> INSERT INTO products VALUES (505, 'Printer',  2, 8000);
+
+1 row created.
+
+SQL> -->2. Select products with low stock.
+SQL> select * from products
+  2  where quantity=(select min(quantity) from products);
+
+PRODUCT_ID PRODUCT_NAME      QUANTITY      PRICE                                
+---------- --------------- ---------- ----------                                
+       503 Keyboard                 0       1200                                
+
+SQL> --> or if we assume low stock means less than 5 then...
+SQL> select * from products
+  2  where quantity<5;
+
+PRODUCT_ID PRODUCT_NAME      QUANTITY      PRICE                                
+---------- --------------- ---------- ----------                                
+       503 Keyboard                 0       1200                                
+       505 Printer                  2       8000                                
+
+SQL> -->3. Increase price by 15%.
+SQL> update product set
+  2  price =price+(price*1.5);
+update product set
+       *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> update products set
+  2  price =price+(price*1.5);
+price =price+(price*1.5)
+            *
+ERROR at line 2:
+ORA-01438: value larger than specified precision allowed for this column 
+
+
+SQL> update product set
+  2  price =price*1.5;
+update product set
+       *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> update products set
+  2  price =price*1.5;
+
+5 rows updated.
+
+SQL> -->
+SQL> -->Create SAVEPOINT PRICE_UPDATED.
+SQL> savepoint price_updated;
+
+Savepoint created.
+
+SQL> -->5. Delete products with zero quantity.
+SQL> delete from products where quantity=0;
+
+1 row deleted.
+
+SQL> -->
+SQL> rollback to price_updated;
+
+Rollback complete.
+
+SQL> -->7. Commit updates.
+SQL> spool off
