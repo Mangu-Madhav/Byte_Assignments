@@ -4,7 +4,7 @@
 # In[6]:
 
 
-# 1 Program to print the number 10
+#1 Program to print the number 10
 a=10
 print(a)
 
