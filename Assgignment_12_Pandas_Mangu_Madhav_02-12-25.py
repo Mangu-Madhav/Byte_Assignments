@@ -8,7 +8,7 @@
 
 # Part A: Data Selection
 
-# 1.Create a DataFramedf with 10 rows and 5 columns containing random integers from 1 to 100.
+#1.Create a DataFramedf with 10 rows and 5 columns containing random integers from 1 to 100.
 # a. Select the value at the 3rd row and 2nd column.
 # b. Select all rows but only columns ['A', 'C'].
 # c. Select multiple rows [2, 4, 7] and all columns.
