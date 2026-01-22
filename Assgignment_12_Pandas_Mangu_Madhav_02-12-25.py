@@ -34,7 +34,7 @@ print("rows [1, 3, 5] and columns ['B', 'D']\n",df.loc[[1,3,5],["B","D"]])
 
 # Part B: Data Modification
 
-# 2.Using the same DataFramedf:
+#2.Using the same DataFramedf:
 # a. Add a new column E with values [10,20,...] corresponding to row numbers.
 # b. Remove the column C.
 # c. Replace all values in column B with 0.
