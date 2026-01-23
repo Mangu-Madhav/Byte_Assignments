@@ -62,7 +62,7 @@ a
 
 # Part C: Deleting Values
 
-# 3.a. Delete a single value in the DataFrame by setting it to NaN.
+#3.a. Delete a single value in the DataFrame by setting it to NaN.
 # b. Drop row 3 entirely.
 # c. Drop column D.
 # d. Drop multiple columns ['B', 'E'].
