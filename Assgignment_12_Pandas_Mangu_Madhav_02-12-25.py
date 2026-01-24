@@ -82,7 +82,7 @@ df
 
 # Part D: Mathematical Operations
 
-# 4.	a. Add 10 to all values in column A.
+#4.	a. Add 10 to all values in column A.
 # b. Multiply column B by 2.
 # c. Calculate the sum of row 5.
 # d. Calculate the mean of all columns.
