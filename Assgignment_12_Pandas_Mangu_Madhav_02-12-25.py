@@ -100,7 +100,7 @@ print("Calculate the sum of row 5:", df.iloc[4].sum())
 
 # Part E: Conditional Selection
 
-# 5.	a. Extract all rows where column A > 50.
+#5.	a. Extract all rows where column A > 50.
 # b. Extract all rows where column B < 30 and column D > 10.
 # c. Replace all values in column C where value < 50 with 0.
 print(a)
