@@ -28,7 +28,7 @@ df
 # In[2]:
 
 
-# 2. What is the median of the following data set?
+#2. What is the median of the following data set?
 # data=[32.6,21,10,8,11,12,36,17,16,15,18,40,24,21,23,24,24,29,16,32,31,10,30,35,32,18,39,12,20]
 data=[32.6,21,10,8,11,12,36,17,16,15,18,40,24,21,23,24,24,29,16,32,31,10,30,35,32,18,39,12,20]
 df=pd.DataFrame(data)
