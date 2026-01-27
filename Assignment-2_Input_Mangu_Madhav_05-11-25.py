@@ -65,7 +65,7 @@ a=input("enter an expression to evaluate")
 # In[13]:
 
 
-#8  Take a string input representing a number, convert it to int, and add 10 to it
+#8 Take a string input representing a number, convert it to int, and add 10 to it
 a=input("enter a number")
 b=int(a)+10
 print(b)
