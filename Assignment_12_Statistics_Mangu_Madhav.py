@@ -42,7 +42,7 @@ df
 # In[3]:
 
 
-#3. Identify the mode for the following data set:
+#3.Identify the mode for the following data set:
 data=[21,19,62,21,22,22,66,28,66,48,79,59,28,62,63,63,48,66,59,66,94,79,19,94]
 df=pd.DataFrame(data)
 df=df.rename(columns={0:"x"})
