@@ -22,7 +22,7 @@ print(a)
 # In[3]:
 
 
-#3  Take your age as input and print how many years are left to reach 100.
+#3 Take your age as input and print how many years are left to reach 100.
 age=int(input("enter your age"))
 print(100-age, "more years to reach 100")
 
