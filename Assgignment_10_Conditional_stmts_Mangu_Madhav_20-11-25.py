@@ -4,7 +4,7 @@
 # In[1]:
 
 
-#1. Login Verification: Check if the entered password equals 'admin123'.
+#1.Login Verification: Check if the entered password equals 'admin123'.
 password='admin123'
 user_password=input("enter the password")
 if(password==user_password):
