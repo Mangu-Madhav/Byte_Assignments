@@ -32,7 +32,7 @@ print("rows [1, 3, 5] and columns ['B', 'D']\n",df.loc[[1,3,5],["B","D"]])
 # In[2]:
 
 
-# Part B: Data Modification
+#Part B: Data Modification
 
 #2.Using the same DataFramedf:
 # a. Add a new column E with values [10,20,...] corresponding to row numbers.
