@@ -60,7 +60,7 @@ a
 # In[3]:
 
 
-# Part C: Deleting Values
+#Part C: Deleting Values
 
 #3.a. Delete a single value in the DataFrame by setting it to NaN.
 # b. Drop row 3 entirely.
