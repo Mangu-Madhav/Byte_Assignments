@@ -12,7 +12,7 @@ print(a)
 # In[9]:
 
 
-# 2 program to print the numbers 5,10,15 with space
+#2 program to print the numbers 5,10,15 with space
 a=5
 b=10
 c=15
