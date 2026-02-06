@@ -22,7 +22,7 @@ print(a,b,c)
 # In[20]:
 
 
-# 3 Program to store and print its value
+#3 Program to store and print its value
 m="madhav"
 print(m)
 
