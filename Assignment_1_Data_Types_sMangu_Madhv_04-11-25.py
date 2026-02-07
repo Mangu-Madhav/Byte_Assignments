@@ -30,7 +30,7 @@ print(m)
 # In[12]:
 
 
-# program to print first and last name using two variables
+#4 program to print first and last name using two variables
 a="Mangu"
 b="Madhav"
 print(a+" "+b)
