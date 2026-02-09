@@ -57,7 +57,7 @@ print("My name is {} and I live {}".format(a,b))
 # In[23]:
 
 
-# 7 Program to print a,b,c values which are seperated by |
+#7 Program to print a,b,c values which are seperated by |
 a=10
 b=20
 c=30
