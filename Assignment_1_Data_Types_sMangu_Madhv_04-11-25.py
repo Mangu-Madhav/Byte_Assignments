@@ -47,7 +47,7 @@ print("I am",a,"years old")
 # In[22]:
 
 
-# 6 program to print the message: My name is Madhav and I live in Narayanpet using the format() method
+#6 program to print the message: My name is Madhav and I live in Narayanpet using the format() method
 
 a="madhav"
 b="Narayanpet"
