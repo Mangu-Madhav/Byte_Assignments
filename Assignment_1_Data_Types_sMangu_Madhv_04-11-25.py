@@ -67,7 +67,7 @@ print(a,"|",b,"|",c)
 # In[24]:
 
 
-# 8 Python program to print Python and Rocks! on the same line without using two print() statements.
+#8 Python program to print Python and Rocks! on the same line without using two print() statements.
 print("Python and Rocks!")
 
 
