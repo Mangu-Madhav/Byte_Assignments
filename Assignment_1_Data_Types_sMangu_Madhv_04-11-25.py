@@ -100,7 +100,7 @@ print(city)
 # In[34]:
 
 
-# 12 program to swap a and b
+#12 program to swap a and b
 a=10
 b=20
 c=a
