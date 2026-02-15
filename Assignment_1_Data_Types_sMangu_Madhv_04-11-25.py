@@ -112,7 +112,7 @@ print(a,b)
 # In[76]:
 
 
-# 13 program to Create three variables in one line and assign them the values 5, 10, and "Python".
+#13 program to Create three variables in one line and assign them the values 5, 10, and "Python".
 a,b,c=5,10,"python"
 print(a,b,c)
 
