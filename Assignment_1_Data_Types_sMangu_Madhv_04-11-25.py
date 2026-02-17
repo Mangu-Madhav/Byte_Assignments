@@ -120,7 +120,7 @@ print(a,b,c)
 # In[42]:
 
 
-# 14 program Assign the same value "Red" to three variables color1, color2, and color3.
+#14 program Assign the same value "Red" to three variables color1, color2, and color3.
 color1=color2=color3="RED"
 
 
