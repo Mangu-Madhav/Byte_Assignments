@@ -76,7 +76,7 @@ print("sum of the numbers is",sum)
 # In[5]:
 
 
-# 7 Calculate factorial of a number using only while loop 
+#7 Calculate factorial of a number using only while loop 
 n=int(input("enter any number"))
 fact=1
 while(n>1):
