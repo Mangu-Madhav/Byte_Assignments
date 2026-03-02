@@ -88,7 +88,7 @@ print(f'factorial of the number  is {fact}')
 # In[6]:
 
 
-# 8 Reverse a number using while loop (12345 → 54321)
+#8 Reverse a number using while loop (12345 → 54321)
 n=int(input("enter any number to print it in reverse"))
 reverse=0
 while(n>0):
