@@ -128,7 +128,7 @@ a=5
 print(a,type(a))
 
 
-#3. Basic Operators (Arithmetic, Comparison, Logical)
+#3.Basic Operators (Arithmetic, Comparison, Logical)
 # 
 # **Question 11:** Write a Python program to perform arithmetic operations: addition, subtraction, multiplication, and division.
 
