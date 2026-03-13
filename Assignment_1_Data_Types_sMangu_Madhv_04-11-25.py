@@ -84,7 +84,7 @@ print(f'sum of {a} and {b} is {c}')
 # In[31]:
 
 
-# 10 program to Ask the user to enter their name and print: Hell0, Madhav
+#10 program to Ask the user to enter their name and print: Hell0, Madhav
 a=input("enter your name")
 print("Hello,",a)
 
