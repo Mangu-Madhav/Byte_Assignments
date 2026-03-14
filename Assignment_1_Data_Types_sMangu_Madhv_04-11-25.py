@@ -92,7 +92,7 @@ print("Hello,",a)
 # In[32]:
 
 
-# 11 program to Create a variable named city and assign your favourite city name to it. Print the variable
+#11 program to Create a variable named city and assign your favourite city name to it. Print the variable
 city="Hyderabad"
 print(city)
 
