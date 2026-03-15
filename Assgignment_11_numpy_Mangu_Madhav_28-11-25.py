@@ -7,7 +7,7 @@
 
 
 ### Assignment 1: Array Creation and Manipulation
-# 1. Create a NumPy array of shape (5, 5) filled with random integers between 1 and 20. Replace all the elements in the third column with 1.
+#1. Create a NumPy array of shape (5, 5) filled with random integers between 1 and 20. Replace all the elements in the third column with 1.
 import numpy as np
 a=np.random.randint(1,21,[5,5])
 print(a)
@@ -18,7 +18,7 @@ print("after replace of all elements in 3rd column with 1:\n",a)
 # In[44]:
 
 
-# 2. Create a NumPy array of shape (4, 4) with values from 1 to 16. Replace the diagonal elements with 0.
+#2. Create a NumPy array of shape (4, 4) with values from 1 to 16. Replace the diagonal elements with 0.
 b=[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
 c=np.array(b)
 for i in range(0,4):
