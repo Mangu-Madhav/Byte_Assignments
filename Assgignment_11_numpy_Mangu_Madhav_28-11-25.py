@@ -33,7 +33,7 @@ print(c.shape)
 
 
 #Assignment 3: Array Operations
-# 1. Create two NumPy arrays of shape (3, 4) filled with random integers. Perform element-wise addition, subtraction, multiplication, and division.
+#1. Create two NumPy arrays of shape (3, 4) filled with random integers. Perform element-wise addition, subtraction, multiplication, and division.
 a=np.random.randint(1,13,[3,4])
 print(a)
 print("addition:\n",a+10)
