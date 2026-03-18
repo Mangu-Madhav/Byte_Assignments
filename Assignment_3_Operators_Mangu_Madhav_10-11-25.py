@@ -31,7 +31,6 @@ print(userInput)
 
 # In[12]:
 
-
 a=float(input("enter any number"))
 if(a>0):
     print(a,"is positive number")
