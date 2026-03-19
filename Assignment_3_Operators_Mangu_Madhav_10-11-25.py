@@ -60,7 +60,6 @@ else:
 
 # In[122]:
 
-
 a=int(input("enter a number to find its factorial"))
 fact=1
 while(a>0):
