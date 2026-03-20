@@ -134,7 +134,6 @@ print(a,type(a))
 
 # In[36]:
 
-
 a=20
 b=5
 print(f'Addition of {a} and {b} is {a+b}')
