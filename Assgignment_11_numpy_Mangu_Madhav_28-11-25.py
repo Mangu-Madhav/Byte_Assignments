@@ -62,7 +62,7 @@ for i in range(0,4):
 
 # In[49]:
 
-# Assignment 7: Advanced Array Manipulation
+#Assignment 7: Advanced Array Manipulation
 # # 1. Create a NumPy array of shape (3, 3) with values from 1 to 9. Reshape the array to shape (1, 9) and then to shape (9, 1).
 a=np.arange(1,10)
 print(a)
