@@ -181,7 +181,6 @@ print(f'square of {a} is {a**2}')
 
 # In[68]:
 
-
 a=float(input("enter a number"))
 if(a%2==0):
     print(f'{a} is EVEN')
