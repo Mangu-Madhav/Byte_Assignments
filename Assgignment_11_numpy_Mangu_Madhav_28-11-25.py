@@ -17,7 +17,6 @@ print("after replace of all elements in 3rd column with 1:\n",a)
 
 # In[44]:
 
-
 #2. Create a NumPy array of shape (4, 4) with values from 1 to 16. Replace the diagonal elements with 0.
 b=[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
 c=np.array(b)
@@ -45,7 +44,7 @@ print("division\n",a/3)
 # In[46]:
 
 
-# 2. Create a NumPy array of shape (4, 4) with values from 1 to 16. Compute the row-wise and column-wise sum.
+#2. Create a NumPy array of shape (4, 4) with values from 1 to 16. Compute the row-wise and column-wise sum.
 a=np.arange(1,17)
 print("elements of a:",a)
 b=a.reshape(4,4)
