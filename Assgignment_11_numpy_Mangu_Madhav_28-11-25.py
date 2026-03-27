@@ -97,7 +97,6 @@ print("elements at corner of the matrix:\n",a[0,0],a[0,4],a[4,0],a[4,4])
 
 # In[42]:
 
-
 # 2. Create a NumPy array of shape (4, 4) filled with random integers. Use boolean indexing to set all elements greater than 10 to 10.
 a=np.random.randint(1,20,[4,4])
 print(a)
