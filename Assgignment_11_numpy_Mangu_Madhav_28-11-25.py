@@ -105,4 +105,3 @@ for i in range(0,4):
         if a[i,j]>10:
             a[i,j]=10
 print("After replacing all the elements greater than 10 to 10 is \n",a)
-
