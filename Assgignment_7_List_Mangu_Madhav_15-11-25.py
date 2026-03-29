@@ -3,7 +3,6 @@
 
 # In[ ]:
 
-
 ##  1: Creating and Accessing Lists
 #Create a list of the first 20 positive integers. Print the list.
 l1=list(range(1,21))
