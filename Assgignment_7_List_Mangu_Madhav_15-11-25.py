@@ -12,7 +12,7 @@ print(l1)
 # In[5]:
 
 
-## 2: Accessing List Elements
+##2: Accessing List Elements
 #Print the first, middle, and last elements of the list created in Assignment 1.
 l1=list(range(1,21))
 print("first element",l1[0])
