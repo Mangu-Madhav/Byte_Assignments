@@ -34,7 +34,7 @@ print("elements from index 5 to 15 are",l1[5:16])
 # In[18]:
 
 
-## 4: List Comprehensions
+##4: List Comprehensions
 #Create a new list containing the squares of the first 10 positive integers using a list comprehension. Print the new list.
 l=list(range(1,11))
 l2=list()
