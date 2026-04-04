@@ -57,7 +57,6 @@ print(l2)
 
 # In[32]:
 
-
 ##  6: List Methods
 #Create a list of random numbers and sort it in ascending and descending order. Remove the duplicates from the list and print the modified list.
 l1=[1,385,38,356,7,2,7,38,378,3,6,5,2,7,12,45,76,0]
