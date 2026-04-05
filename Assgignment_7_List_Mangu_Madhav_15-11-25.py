@@ -68,7 +68,6 @@ print(l1)
 
 # In[41]:
 
-
 ## 7: Nested Lists
 #Create a nested list representing a 3x3 matrix and print the matrix. Access and print the element at the second row and third column.
 l=[[1,2,3],[4,5,6],[7,8,9]]
@@ -80,7 +79,6 @@ print("element at the second row and third column:",l[1][2])
 
 
 # In[39]:
-
 
 ###  8: List of Dictionaries
 #Create a list of dictionaries where each dictionary represents a student with keys 'name' and 'score'. Sort the list of dictionaries by the 'score' in descending order and print the sorted list.
