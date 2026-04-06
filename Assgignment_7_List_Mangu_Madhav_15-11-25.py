@@ -183,4 +183,3 @@ def rotationlist(l,n):
 
 ### Assignment 15: List Intersection
 #Write a function that takes two lists and returns a new list containing only the elements that are present in both lists. Print the intersected list.
-
