@@ -13,7 +13,6 @@ if(password==user_password):
 
 # In[3]:
 
-
 #2. Age Eligibility: Check if age ≥ 18 for A-rated movie.
 age=int(input("enter your age"))
 if(age>=18):
