@@ -21,7 +21,6 @@ if(age>=18):
 
 # In[5]:
 
-
 #3. Mobile Recharge Offer: ₹199 or above → free 2GB data coupon.
 recharge_plan=int(input("enter your recharge plan"))
 if(recharge_plan>=199):
