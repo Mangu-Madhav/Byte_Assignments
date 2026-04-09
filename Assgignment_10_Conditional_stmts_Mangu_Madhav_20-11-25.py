@@ -29,7 +29,6 @@ if(recharge_plan>=199):
 
 # In[8]:
 
-
 #4.Student Grade Checker: Assign grades based on marks.
 marks=int(input("enter your marks"))
 if(marks>=90):
