@@ -41,7 +41,7 @@ elif(marks>=60):
     print("Grade: D, You've to improve")
 else:
     print("FAIL, Better luck Next Time")
-    
+
 
 
 # In[13]:
