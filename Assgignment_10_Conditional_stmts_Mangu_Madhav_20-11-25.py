@@ -45,7 +45,6 @@ else:
 
 # In[13]:
 
-
 #5.Temperature Alert System: Categorize weather by temperature.
 Temp=eval(input("enter the temperature"))
 if(Temp>40):
