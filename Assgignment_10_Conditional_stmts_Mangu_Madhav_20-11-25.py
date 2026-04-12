@@ -56,7 +56,6 @@ elif(Temp>20):
 else:
     print("It's too cold to go out")
 
-
 # In[16]:
 
 
