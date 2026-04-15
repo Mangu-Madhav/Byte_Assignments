@@ -22,7 +22,6 @@ print("\nMean of first 10 odd numbers :",μ)
 df
 # # x̄
 
-
 # In[2]:
 
 
