@@ -47,7 +47,6 @@ print(df["x"].mode)
 
 # In[4]:
 
-
 #4 given a Dataset, calculate the mean,median,and mode.Interpret the results adn determine which measure of central tendency is most appropriate for the dataset
 #Test Scores of 10 Students:[65,70,75,80,85,90,95,100,105,110]
 df1=pd.DataFrame([65,70,70,80,85,90,95,100,105,110])
