@@ -57,7 +57,6 @@ print(df1.mode())
 
 # In[18]:
 
-
 #5.Calculate the the mean,median,and mode for the following dataset. Then add an outlier value of 100 and 
 # recalculate the measures.Discuss how the outlier affects the mean compared to the median and mode
 # originalDataset:[50,52,53,55,57,60,62,64,65]
