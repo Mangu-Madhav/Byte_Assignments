@@ -84,4 +84,3 @@ print("median of the data is \n",df1.median())
 # In[ ]:
 
 
-
